@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="androidx.core.content.ContextCompat" />
+        <variable name="task" type="com.darekbx.ownspace.tasks.model.Task" />
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <!-- Original, 10 year old layout, do not refactor //-->
+        <ImageView
+            android:id="@+id/task_priority_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@{ContextCompat.getDrawable(context, task.getPriorityImage())}"/>
+        <TextView
+            android:id="@+id/task_name"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="3dip"
+            android:paddingBottom="3dip"
+            android:layout_width="170dip"
+            android:layout_height="wrap_content"
+            android:text="@{task.name}"/>
+        <TextView
+            android:id="@+id/task_date"
+            android:textSize="12sp"
+            android:paddingLeft="10dip"
+            android:paddingTop="3dip"
+            android:paddingBottom="3dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{task.date}"/>
+
+    </LinearLayout>
+</layout>

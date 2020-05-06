@@ -1,8 +1,8 @@
 package com.darekbx.ownspace.tasks.model
 
-import java.util.Date
+import com.darekbx.ownspace.R
 
-class Task(val name: String, val contents: String, val date: Date, val flag: Flag) {
+class Task(val id: Long?, val name: String, val contents: String, val date: String, val flag: Flag) {
 
     enum class Flag(val value: Int) {
         LOW(0),
@@ -14,4 +14,11 @@ class Task(val name: String, val contents: String, val date: Date, val flag: Fla
                 values().associateBy(Flag::value)[value] ?: LOW
         }
     }
+
+    fun getPriorityImage() =
+        when (flag) {
+            Flag.LOW -> R.drawable.ic_task_priority_low
+            Flag.HIGH -> R.drawable.ic_task_priority_high
+            else -> R.drawable.ic_tasks
+        }
 }

@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Toast
 import com.darekbx.ownspace.common.utils.PermissionsHelper
 import com.darekbx.ownspace.notepad.ui.NotepadActivity
+import com.darekbx.ownspace.tasks.ui.TasksActivity
 import javax.inject.Inject
 
 class ApplicationsActivity : AppCompatActivity() {
@@ -42,6 +43,7 @@ class ApplicationsActivity : AppCompatActivity() {
     }
 
     fun onTasksClick(view: View) {
+        startActivity(Intent(this, TasksActivity::class.java))
     }
 
     fun onNotepadClick(view: View) {

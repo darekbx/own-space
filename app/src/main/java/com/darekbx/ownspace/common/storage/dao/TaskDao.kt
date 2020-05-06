@@ -17,4 +17,7 @@ interface TaskDao {
 
     @Query("SELECT * FROM task")
     fun fetch(): LiveData<List<TaskDto>>
+
+    @Query("SELECT * FROM task WHERE id = :id")
+    fun fetch(id: Long): LiveData<TaskDto>
 }

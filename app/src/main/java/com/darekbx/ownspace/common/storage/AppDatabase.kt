@@ -3,6 +3,7 @@ package com.darekbx.ownspace.common.storage
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.darekbx.ownspace.common.storage.dao.NotepadDao
+import com.darekbx.ownspace.common.storage.dao.TaskDao
 import com.darekbx.ownspace.common.storage.entities.NotepadDto
 import com.darekbx.ownspace.common.storage.entities.TaskDto
 
@@ -14,4 +15,6 @@ abstract class AppDatabase : RoomDatabase() {
     }
 
     abstract fun notepadDao(): NotepadDao
+
+    abstract fun taskDao(): TaskDao
 }

@@ -24,6 +24,9 @@ class AppModule(val application: OwnSpaceApplication) {
     fun provideNotepadDao(database: AppDatabase) = database.notepadDao()
 
     @Provides
+    fun provideTaskDao(database: AppDatabase) = database.taskDao()
+
+    @Provides
     fun provideDatabase(context: Context) =
         Room.databaseBuilder(context, AppDatabase::class.java, AppDatabase.DB_NAME).build()
 }

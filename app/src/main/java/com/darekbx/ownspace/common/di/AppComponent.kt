@@ -4,6 +4,7 @@ import com.darekbx.ownspace.ApplicationsActivity
 import com.darekbx.ownspace.common.di.viewmodels.ViewModelModule
 import com.darekbx.ownspace.notepad.ui.NoteFragment
 import com.darekbx.ownspace.notepad.ui.NotepadActivity
+import com.darekbx.ownspace.tasks.ui.TaskActivity
 import com.darekbx.ownspace.tasks.ui.TasksActivity
 import dagger.Component
 import javax.inject.Singleton
@@ -20,4 +21,5 @@ interface AppComponent {
 
     // Tasks
     fun inject(tasksActivity: TasksActivity)
+    fun inject(taskActivity: TaskActivity)
 }

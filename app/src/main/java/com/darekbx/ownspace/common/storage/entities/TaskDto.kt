@@ -9,6 +9,6 @@ class TaskDto(
     @PrimaryKey(autoGenerate = true) var id: Long? = null,
     @ColumnInfo(name = "name") var name: String = "",
     @ColumnInfo(name = "content") var content: String = "",
-    @ColumnInfo(name = "date") var date: Long = 0L,
+    @ColumnInfo(name = "date") var date: String = "",
     @ColumnInfo(name = "flag") var flag: Int = 0
 )
