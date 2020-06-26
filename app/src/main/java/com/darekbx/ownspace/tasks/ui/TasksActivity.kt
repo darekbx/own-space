@@ -5,13 +5,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.darekbx.ownspace.OwnSpaceApplication
 import com.darekbx.ownspace.R
 import com.darekbx.ownspace.tasks.model.Task
 import com.darekbx.ownspace.tasks.viewmodels.TaskViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_tasks.*
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class TasksActivity : AppCompatActivity() {
 
     @Inject
@@ -22,7 +23,6 @@ class TasksActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tasks)
-        (application as OwnSpaceApplication).appComponent.inject(this)
 
         val adapter = TasksAdapter(this)
         tasks_list_view.adapter = adapter

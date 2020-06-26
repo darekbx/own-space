@@ -6,12 +6,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.darekbx.ownspace.OwnSpaceApplication
 import com.darekbx.ownspace.R
 import com.darekbx.ownspace.notepad.viewmodels.NotepadViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_note.*
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class NoteFragment : Fragment() {
 
     companion object {
@@ -35,7 +36,6 @@ class NoteFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        (activity?.application as OwnSpaceApplication).appComponent.inject(this)
 
         notepadViewModel =
             ViewModelProvider(this, viewModelFactory)[NotepadViewModel::class.java].apply {

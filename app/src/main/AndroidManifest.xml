@@ -18,18 +18,21 @@
         <!-- Notepad //-->
         <activity
             android:name=".notepad.ui.NotepadActivity"
-            android:label="@string/title_activity_notepad"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- Tasks //-->
         <activity
             android:name=".tasks.ui.TasksActivity"
-            android:label="@string/title_activity_notepad"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".tasks.ui.TaskActivity"
-            android:label="@string/title_activity_notepad"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Weight //-->
+        <activity
+            android:name=".weight.ui.WeightActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
 
         <activity android:name=".ApplicationsActivity">
             <intent-filter>

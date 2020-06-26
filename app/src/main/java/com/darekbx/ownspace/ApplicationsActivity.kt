@@ -9,8 +9,10 @@ import android.widget.Toast
 import com.darekbx.ownspace.common.utils.PermissionsHelper
 import com.darekbx.ownspace.notepad.ui.NotepadActivity
 import com.darekbx.ownspace.tasks.ui.TasksActivity
+import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class ApplicationsActivity : AppCompatActivity() {
 
     @Inject
@@ -19,7 +21,6 @@ class ApplicationsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_applications)
-        (application as OwnSpaceApplication).appComponent.inject(this)
     }
 
     override fun onResume() {

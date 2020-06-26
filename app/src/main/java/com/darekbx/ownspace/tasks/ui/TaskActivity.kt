@@ -5,13 +5,14 @@ import android.text.method.ScrollingMovementMethod
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.darekbx.ownspace.OwnSpaceApplication
 import com.darekbx.ownspace.R
 import com.darekbx.ownspace.tasks.model.Task
 import com.darekbx.ownspace.tasks.viewmodels.TaskViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_task.*
 import javax.inject.Inject
 
+@AndroidEntryPoint
 class TaskActivity : AppCompatActivity() {
 
     companion object {
@@ -26,7 +27,6 @@ class TaskActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_task)
-        (application as OwnSpaceApplication).appComponent.inject(this)
 
         taskViewModel = ViewModelProvider(this, viewModelFactory)[TaskViewModel::class.java]
         loadTask()

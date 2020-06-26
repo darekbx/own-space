@@ -3,7 +3,4 @@
     <string name="applications">Applications</string>
 
     <string name="permissions_are_required">Please grant all required permissions.</string>
-    <string name="title_activity_notepad">NotepadActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
 </resources>
